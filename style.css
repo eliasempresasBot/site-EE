@@ -1,0 +1,122 @@
+```css
+/* Resetando margens e preenchimento */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+/* Usando Flexbox para centralizar o conteúdo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+    background-color: #f4f4f4;
+    flex-direction: column; /* Adicionando direção de coluna para o layout */
+}
+
+/* Estilos do ícone de hambúrguer */
+.menu-icon {
+    position: fixed; /* Fixa o ícone na tela */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px; /* Largura do ícone */
+    height: 20px; /* Altura total do ícone */
+    cursor: pointer
+}
+
+.bar {
+    width: 100%; /* Largura total da barra */
+    height: 4px; /* Espessura das barras */
+    background-color: #F50000; /* Cor das barras */
+    border-radius: 2px;
+}
+
+/* Menu de navegação */
+nav {
+    display: none; /* Menu inicialmente escondido */
+    background-color: #F50000;
+    position: fixed; /* Menu fixo na tela */
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px 20px;
+    z-index: 999; /* Menu fica acima de outros elementos */
+}
+
+nav.active {
+    display: block; /* Menu fica visível quando a classe 'active' é adicionada */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Corrigido de 'fex' para 'flex' */
+    flex-direction: column;
+    align-items: center; /* Alinha os itens no centro */
+}
+
+nav ul li {
+    margin: 20px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #fff; /* Corrigido de '#whire' para '#fff' */
+    color: red;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0; /* Garante que o rodapé fique na parte inferior */
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer .social-media {
+    margin-top: 20px;
+}
+
+footer .social-media a {
+    color: red;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 15px;
+    display: inline-flex;
+    align-items: center;
+}
+
+footer .social-media a .social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+/* Efeito de hover nas redes sociais */
+footer .social-media a:hover {
+    opacity: 0.8;
+}
+
+/* Usando box-sizing globalmente */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+```
